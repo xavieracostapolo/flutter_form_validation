@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:form_validation/extensions/ext_string.dart';
 import 'package:form_validation/screens/success_screen.dart';
 import 'package:form_validation/widgets/custom_form_field.dart';
+import 'package:form_validation/widgets/custom_image_form_field.dart';
 
 class FormScreen extends StatefulWidget {
   const FormScreen({Key? key}) : super(key: key);
@@ -36,13 +37,13 @@ class _FormScreenState extends State<FormScreen> {
                 )
               ],
               validator: (val) {
-                if (val!.isValidName) return 'Enter valid name';
+                if (!val!.isValidName) return 'Enter valid name';
               },
             ),
             CustomFormField(
               hintText: 'Email',
               validator: (val) {
-                if (val!.isValidEmail) return 'Enter valid email';
+                if (!val!.isValidEmail) return 'Enter valid email';
               },
             ),
             CustomFormField(
@@ -53,13 +54,19 @@ class _FormScreenState extends State<FormScreen> {
                 )
               ],
               validator: (val) {
-                if (val!.isValidPhone) return 'Enter valid phone';
+                if (!val!.isValidPhone) return 'Enter valid phone';
               },
             ),
             CustomFormField(
               hintText: 'Password',
               validator: (val) {
-                if (val!.isValidPassword) return 'Enter valid password';
+                if (!val!.isValidPassword) return 'Enter valid password';
+              },
+            ),
+            CustomImageFormField(
+              onChanged: (p0) {},
+              validator: (p0) {
+                return null;
               },
             ),
             ElevatedButton(

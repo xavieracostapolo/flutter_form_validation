@@ -38,7 +38,7 @@ class CustomImageFormField extends StatelessWidget {
                   ),
                   child: Column(
                     children: const [
-                      Icon(Icons.upload_file),
+                      Icon(Icons.upload_rounded),
                       Text('Upload Image')
                     ],
                   ),

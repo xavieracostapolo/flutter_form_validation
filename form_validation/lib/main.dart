@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:form_validation/screens/form_screen.dart';
+import 'package:form_validation/screens/screens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity
       ),
-      home: const FormScreen(),
+      home: FormBuilderScreen(),
     );
   }
 }
